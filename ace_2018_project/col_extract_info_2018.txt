@@ -1,0 +1,275 @@
+var idx, column values, length, variable names
+1. 1 - 2 :: 2 :: State FIPS Code
+2. 17 - 18 :: 2 :: File Month
+3. 19 - 26 :: 8 :: Interview Date
+4. 19 - 20 :: 2 :: Interview Month
+5. 21 - 22 :: 2 :: Interview Day
+6. 23 - 26 :: 4 :: Interview Year
+7. 32 - 35 :: 4 :: Final Disposition
+8. 36 - 45 :: 10 :: Annual Sequence Number
+9. 36 - 45 :: 10 :: Primary Sampling Unit
+10. 63 :: 1 :: Correct telephone number?
+11. 64 :: 1 :: Private Residence?
+12. 65 :: 1 :: Do you live in college housing?
+13. 66 :: 1 :: Resident of State
+14. 67 :: 1 :: Cellular Telephone
+15. 68 :: 1 :: Are you 18 years of age or older?
+16. 69 - 70 :: 2 :: Number of Adults in Household
+17. 71 - 72 :: 2 :: Number of Adult men in Household
+18. 73 - 74 :: 2 :: Number of Adult women in Household
+19. 75 :: 1 :: Safe time to talk
+20. 76 :: 1 :: Correct Phone Number?
+21. 77 :: 1 :: Is this a cell phone?
+rep 22. 78 :: 1 :: Are you 18 years of age or older?
+23. 79 :: 1 :: Do you live in a private residence?
+rep 24. 80 :: 1 :: Do you live in college housing?
+25. 81 :: 1 :: Do you currently live in ____(state)____?
+26. 84 :: 1 :: Do you also have a landline telephone?
+rep 27. 85 - 86 :: 2 :: Number of Adults in Household
+28. 90 :: 1 :: General Health
+29. 91 - 92 :: 2 :: Number of Days Physical Health Not Good
+30. 93 - 94 :: 2 :: Number of Days Mental Health Not Good
+31. 95 - 96 :: 2 :: Poor Physical or Mental Health
+32. 97 :: 1 :: Have any health care coverage
+33. 98 :: 1 :: Multiple Health Care Professionals
+34. 99 :: 1 :: Could Not See Doctor Because of Cost
+35. 100 :: 1 :: Length of time since last routine checkup
+36. 101 :: 1 :: Exercise in Past 30 Days
+37. 102 - 103 :: 2 :: How Much Time Do You Sleep
+38. 104 :: 1 :: Ever Diagnosed with Heart Attack
+39. 105 :: 1 :: Ever Diagnosed with Angina or Coronary Heart Disease
+40. 106 :: 1 :: Ever Diagnosed with a Stroke
+41. 107 :: 1 :: Ever Told Had Asthma
+42. 108 :: 1 :: Still Have Asthma
+43. 109 :: 1 :: (Ever told) you had skin cancer?
+44. 110 :: 1 :: (Ever told) you had any other types of cancer?
+45. 111 :: 1 :: (Ever told) you have chronic obstructive pulmonary disease, emphysema or chronic bronchitis?
+46. 112 :: 1 :: Told Have Arthritis
+47. 113 :: 1 :: Ever told you had a depressive disorder
+48. 114 :: 1 :: (Ever told) you have kidney disease?
+49. 115 :: 1 :: (Ever told) you have diabetes
+50. 116 - 117 :: 2 :: Age When Told Had Diabetes
+51. 118 :: 1 :: Last Visited Dentist or Dental Clinic
+52. 119 :: 1 :: Number of Permanent Teeth Removed
+53. 120 :: 1 :: Respondents Sex
+54. 157 :: 1 :: Marital Status
+55. 158 :: 1 :: Education Level
+56. 159 :: 1 :: Own or Rent Home
+57. 168 :: 1 :: Household Telephones
+58. 169 :: 1 :: Residential Phones
+59. 170 :: 1 :: Do you have a cell phone for personal use?
+60. 171 :: 1 :: Are You A Veteran
+61. 172 :: 1 :: Employment Status
+62. 173 - 174 :: 2 :: Number of Children in Household
+63. 175 - 176 :: 2 :: Income Level
+64. 177 - 180 :: 4 :: Reported Weight in Pounds
+65. 181 - 184 :: 4 :: Reported Height in Feet and Inches
+66. 185 :: 1 :: Pregnancy Status
+67. 186 :: 1 :: Are you deaf or do you have serious difficulty hearing?
+68. 187 :: 1 :: Blind or Difficulty seeing
+69. 188 :: 1 :: Difficulty Concentrating or Remembering
+70. 189 :: 1 :: Difficulty Walking or Climbing Stairs
+71. 190 :: 1 :: Difficulty Dressing or Bathing
+72. 191 :: 1 :: Difficulty Doing Errands Alone
+73. 192 :: 1 :: Smoked at Least 100 Cigarettes
+74. 193 :: 1 :: Frequency of Days Now Smoking
+75. 194 :: 1 :: Stopped Smoking in past 12 months
+76. 195 - 196 :: 2 :: Interval Since Last Smoked
+77. 197 :: 1 :: Use of Smokeless Tobacco Products
+78. 198 - 200 :: 3 :: Days in past 30 had alcoholic beverage
+79. 201 - 202 :: 2 :: Avg alcoholic drinks per day in past 30
+80. 203 - 204 :: 2 :: Binge Drinking
+81. 205 - 206 :: 2 :: Most drinks on single occasion past 30 days
+82. 207 :: 1 :: Adult flu shot/spray past 12 mos
+83. 208 - 213 :: 6 :: When did you (adult) receive your most recent seasonal flu shot/spray?
+84. 214 - 215 :: 2 :: Where did you get your last flu shot/vaccine?
+85. 216 :: 1 :: Pneumonia shot ever
+86. 217 - 218 :: 2 :: Had Fall Past Twelve Months
+87. 219 - 220 :: 2 :: Injured in Fall
+88. 221 :: 1 :: How often use seatbelts in car?
+89. 222 - 223 :: 2 :: Did you drive after having too much to drink in the past 30 days?
+90. 224 :: 1 :: Have You Ever Had a Mammogram
+91. 225 :: 1 :: How Long since Last Mammogram
+92. 226 :: 1 :: Ever Had a Pap Test
+93. 227 :: 1 :: How Long Since Last Pap Test
+94. 228 :: 1 :: Have you ever had an HPV test?
+95. 229 :: 1 :: How long since your last HPV test?
+96. 230 :: 1 :: Had Hysterectomy
+97. 231 :: 1 :: Has a health professional EVER talked with you about the advantages of the PSA test?
+98. 232 :: 1 :: Has a health professional EVER talked with you about the disadvantages of the PSA test?
+99. 233 :: 1 :: Has a doctor EVER recommended that you have a PSA test?
+100. 234 :: 1 :: Ever Had PSA Test
+101. 235 :: 1 :: Time Since Last PSA Test
+102. 236 :: 1 :: What was the MAIN reason you had this PSA test?
+103. 237 :: 1 :: Ever Had Blood Stool Test Using Home Kit
+104. 238 :: 1 :: Time Since Last Blood Stool Test
+105. 239 :: 1 :: Ever Had Sigmoidoscopy/Colonoscopy
+106. 240 :: 1 :: Was your last test a sigmoidoscopy or colonoscopy?
+107. 241 :: 1 :: Time Since Last Sigmoidoscopy/Colonoscopy
+108. 242 :: 1 :: Ever tested HIV
+109. 243 - 248 :: 6 :: Month and Year of Last HIV Test
+110. 249 :: 1 :: Do Any High Risk Situations Apply
+111. 250 :: 1 :: Had a test for high blood sugar or diabetes in the past three years?
+112. 251 :: 1 :: Ever been told by a doctor or other health professional that you have pre - diabetes or borderline diabetes?
+113. 252 :: 1 :: Now Taking Insulin
+114. 253 - 255 :: 3 :: How Often Check Blood for Glucose
+115. 259 - 260 :: 2 :: Times Seen Health Professional for Diabetes
+116. 261 - 262 :: 2 :: Times Checked for Glycosylated Hemoglobin
+117. 263 - 264 :: 2 :: Times Feet Check for Sores/irritations
+118. 265 :: 1 :: Last Eye Exam Where Pupils Were Dilated
+119. 266 :: 1 :: Ever Told Diabetes Has Affected Eyes
+120. 267 :: 1 :: Ever Taken Class in Managing Diabetes
+121. 268 :: 1 :: Do you have Medicare?
+122. 269 - 270 :: 2 :: Primary Health Insurance Coverage
+123. 271 :: 1 :: Delayed Getting Medical Care
+124. 272 - 296 :: 25 :: Delayed Getting Medical Care Other Response
+125. 297 :: 1 :: Without Health Care Coverage Past 12 Months
+126. 298 :: 1 :: Time Since Last Had Health Care Coverage
+127. 299 - 300 :: 2 :: Doctor Visits Past 12 Months
+128. 301 :: 1 :: Could Not Get Medicine Due To Cost
+129. 302 :: 1 :: Satisfied With Care Received
+130. 303 :: 1 :: Currently Have Health Care Bills
+131. 304 :: 1 :: Have you experienced confusion or memory loss that is happening more often or is getting worse?
+132. 305 :: 1 :: Given up day - to - day chores due to confusion or memory loss
+133. 306 :: 1 :: Need assistance with day - to_day activities due to confusion or memory loss
+134. 307 :: 1 :: When you need help with day - to - day activities are you able to get it
+135. 308 :: 1 :: Does confusion or memory loss interfere with work or social activities
+136. 309 :: 1 :: Have you discussed your confusion or memory loss with a health care professional?
+137. 310 :: 1 :: Provided regular care for family or friend
+138. 311 - 312 :: 2 :: Relationship Of Person To Whom You Are Giving Care?
+139. 313 :: 1 :: How Long Provided Care For Person.
+140. 314 :: 1 :: How Many Hours Do You Provide Care For Person?
+141. 315 - 316 :: 2 :: What Is The Major Health Problem, Illness, Disability For Care For Person?
+142. 317 :: 1 :: Managed personal care
+143. 318 :: 1 :: Managed household tasks
+144. 319 :: 1 :: Which support do you MOST need that you are not getting?
+145. 320 :: 1 :: Do you expect to have a relative you will need to provide care for?
+146. 321 :: 1 :: Ever used an e - cigarette?
+147. 322 :: 1 :: Do you now use e - cigarettes, every day, some days, or not at all?
+148. 323 - 324 :: 2 :: During the past 30 days, on how many days did you use marijuana or hashish?
+149. 325 :: 1 :: During the past 30 days, how did you primarily use marijuana?
+150. 326 :: 1 :: What was the reason you used marijuana?
+151. 327 - 328 :: 2 :: Days had trouble with sleep
+152. 329 - 330 :: 2 :: Over the last 2 weeks, how many days did you unintentionally fall asleep during the day?
+153. 331 :: 1 :: Have you ever been told that you snore loudly?
+154. 332 :: 1 :: Has anyone ever observed that you stop breathing during your sleep?
+155. 333 :: 1 :: Had little pleasure doing things
+156. 334 :: 1 :: Felt down, depressed or hopeless
+157. 335 :: 1 :: Felt nervous, anxious or on edge
+158. 336 :: 1 :: Been bothered by not being able to stop or control worrying
+159. 337 :: 1 :: Did you have a cough?
+160. 338 :: 1 :: Did you cough up phlegm?
+161. 339 :: 1 :: Did you have shortness of breath?
+162. 340 :: 1 :: Have you ever been given a breathing test?
+163. 341 - 342 :: 2 :: How many years have you smoked tobacco products?
+164. 343 - 345 :: 3 :: Times used an indoor tanning device
+165. 346 - 348 :: 3 :: Number Of Sunburns In Past 12 Months
+166. 349 :: 1 :: How often protect yourself from the sun
+167. 350 - 351 :: 2 :: How often outside on weekdays
+168. 352 - 353 :: 2 :: How often outside on weekends
+169. 354 - 356 :: 3 :: How old when you first started smoking?
+170. 357 - 359 :: 3 :: How old when you last smoked?
+171. 360 - 362 :: 3 :: On average, how many cigarettes do you smoke each day?
+172. 363 :: 1 :: Did you have a CT or CAT scan?
+173. 364 :: 1 :: How Many Types of Cancer?
+174. 365 - 366 :: 2 :: Age Told Had Cancer
+175. 367 - 368 :: 2 :: Type of Cancer
+176. 369 :: 1 :: Currently Receiving Treatment for Cancer
+177. 370 - 371 :: 2 :: What Type of Doctor Provides Majority of Your Care
+178. 372 :: 1 :: Did You Receive a Summary of Cancer Treatments Received
+179. 373 :: 1 :: Ever Receive Instructions From A Doctor For Follow - Up Check - Ups
+180. 374 :: 1 :: Instructions Written or Printed
+181. 375 :: 1 :: Did Health Insurance Pay For All Of Your Cancer Treatment
+182. 376 :: 1 :: Ever Denied Insurance Coverage Because Of Your Cancer?
+183. 377 :: 1 :: Participate In Clinical Trial As Part Of Cancer Treatment?
+184. 378 :: 1 :: Currently Have Physical Pain From Cancer Or Treatment?
+185. 379 :: 1 :: Is Pain Under Control?
+186. 380 :: 1 :: Why was PSA test done?
+187. 382 :: 1 :: Ever Had Breast Physical Exam by Doctor
+188. 383 :: 1 :: How Long since Last Breast Physical Exam
+189. 384 :: 1 :: Have you ever had the HPV vaccination?
+190. 385 - 386 :: 2 :: How many HPV shots did you receive?
+191. 387 :: 1 :: Received Tetanus Shot Since 2005?
+192. 388 :: 1 :: Have you ever had the shingles or zoster vaccine?
+193. 589 :: 1 :: Sexual orientation
+rep 194. 590 :: 1 :: Sexual orientation
+195. 591 :: 1 :: Do you consider yourself to be transgender?
+196. 598 :: 1 :: Gender of child
+197. 633 :: 1 :: Relationship to child
+198. 634 :: 1 :: Hlth pro ever said child has asthma
+199. 635 :: 1 :: Child still have asthma?
+200. 641 - 642 :: 2 :: Questionnaire Version Identifier
+201. 643 - 644 :: 2 :: Language identifier
+202. 1402 :: 1 :: Metropolitan Status
+203. 1403 :: 1 :: Urban/Rural Status
+204. 1409 :: 1 :: Metropolitan Status Code
+205. 1410 - 1415 :: 6 :: Sample Design Stratification Variable
+206. 1416 - 1425 :: 10 :: Stratum weight
+207. 1446 - 1455 :: 10 :: Raw weighting factor used in raking
+208. 1456 - 1465 :: 10 :: Design weight use in raking
+209. 1471 - 1472 :: 2 :: Imputed race/ethnicity value
+210. 1482 :: 1 :: Child Hispanic, Latino/a, or Spanish origin calculated variable
+211. 1539 - 1540 :: 2 :: Child Non - Hispanic Race including Multiracial
+212. 1541 - 1542 :: 2 :: Preferred Child Race Categories
+213. 1584 - 1593 :: 10 :: Final child weight: Land - line and Cell - Phone data
+214. 1681 :: 1 :: Dual Phone Use Categories
+215. 1682 - 1691 :: 10 :: Dual Phone Use Correction Factor
+216. 1692 - 1701 :: 10 :: Truncated design weight used in adult combined land line and cell phone raking
+217. 1750 - 1759 :: 10 :: Final weight: Land - line and cell - phone data
+218. 1898 :: 1 :: Adults with good or better health
+219. 1899 :: 1 :: Computed Physical Health Status
+220. 1900 :: 1 :: Computed Mental Health Status
+221. 1901 :: 1 :: Respondents aged 18 - 64 with health care coverage
+222. 1902 :: 1 :: Leisure Time Physical Activity Calculated Variable
+223. 1903 :: 1 :: Ever had CHD or MI
+224. 1904 :: 1 :: Lifetime Asthma Calculated Variable
+225. 1905 :: 1 :: Current Asthma Calculated Variable
+226. 1906 :: 1 :: Computed Asthma Status
+227. 1907 :: 1 :: Respondents diagnosed with arthritis
+228. 1908 :: 1 :: Adults aged 18+ that have had permanent teeth extracted
+229. 1909 :: 1 :: Adults aged 65+ who have had all their natural teeth extracted
+230. 1910 :: 1 :: Adults that have visited a dentist, dental hygenist or dental clinic within the past year
+231. 1967 - 1968 :: 2 :: Computed Preferred Race
+232. 1969 - 1970 :: 2 :: Calculated non - Hispanic Race including multiracial
+233. 1973 :: 1 :: Hispanic, Latino/a, or Spanish origin calculated variable
+234. 1974 :: 1 :: Computed Race - Ethnicity grouping
+235. 1975 :: 1 :: - Hispanic Whites/All Others Race Categories Race/Ethnic Group Codes Used In  Post - Stratification Variable
+236. 1976 :: 1 :: Computed Five level race/ethnicity category.
+237. 1977 :: 1 :: Computed race groups used for internet prevalence tables
+238. 1978 - 1979 :: 2 :: Reported age in five - year age categories calculated variable
+239. 1980 :: 1 :: Reported age in two age groups calculated variable
+240. 1981 - 1982 :: 2 :: Imputed Age value collapsed above 80
+241. 1983 :: 1 :: Imputed age in six groups
+242. 1984 - 1986 :: 3 :: Computed Height in Inches
+243. 1987 - 1989 :: 3 :: Computed Height in Meters
+244. 1990 - 1994 :: 5 :: Computed Weight in Kilograms
+245. 1995 - 1998 :: 4 :: Computed body mass index
+246. 1999 :: 1 :: Computed body mass index categories
+247. 2000 :: 1 :: Overweight or obese calculated variable
+248. 2001 :: 1 :: Computed number of children in household
+249. 2002 :: 1 :: Computed level of education completed categories
+250. 2003 :: 1 :: Computed income categories
+251. 2004 :: 1 :: Computed Smoking Status
+252. 2005 :: 1 :: Current Smoking Calculated Variable
+253. 2006 :: 1 :: Drink any alcoholic beverages in past 30 days
+254. 2007 - 2009 :: 3 :: Computed drink - occasions - per - day
+255. 2010 :: 1 :: Binge Drinking Calculated Variable
+256. 2011 - 2015 :: 5 :: Computed number of drinks of alcohol beverages per week
+257. 2016 :: 1 :: Heavy Alcohol Consumption Calculated Variable
+258. 2017 :: 1 :: Flu Shot Calculated Variable
+259. 2018 :: 1 :: Pneumonia Vaccination Calculated Variable
+260. 2019 :: 1 :: Always or Nearly Always Wear Seat Belts
+261. 2020 :: 1 :: Always Wear Seat Belts
+262. 2021 :: 1 :: Drinking and Driving
+263. 2022 :: 1 :: Women respondents aged 40+ who have had a mammogram in the past two years
+264. 2023 :: 1 :: Women respondents aged 50 - 74 that have had a mammogram in the past two years
+265. 2024 :: 1 :: Women respondents aged 21 - 65 who have had a pap test in the past three years
+266. 2025 :: 1 :: Male respondents aged 40+ who have had a PSA test in the past 2 years
+267. 2026 :: 1 :: Respondents aged 50 - 75 who have had a blood stool test within the past year
+268. 2027 :: 1 :: Respondents aged 50 - 75 that who have had a colonoscopy in the past 10 years
+269. 2028 :: 1 :: Respondents aged 50 - 75 who have had a blood stool test within the past 3 years
+270. 2029 :: 1 :: Respondents aged 50 - 75 who have had a sigmoidoscopy within the past 5 years
+271. 2030 :: 1 :: - 75 who have had a blood stool test within the past  3 years and a sigmoidoscopy within the  past 5 years
+272. 2031 :: 1 :: Respondents aged 50 - 75 who have fully met the USPSTF recommendation
+273. 2032 :: 1 :: Ever been tested for HIV calculated variable
+274. 2033 :: 1 :: unknown variable

@@ -127,3 +127,17 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+/.idea/modules.xml
+/.idea/misc.xml
+/.idea/vcs.xml
+/.idea/project_ace_python.iml
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/workspace.xml
+
+# pdfs and data files
+/ace_2018_project/codebook18_llcp-v2-508.pdf
+/ace_2018_project/parsed_ace_data_2018.csv
+/ace_2018_project/montana_parsed_ace_data_2018.csv
+/ace_2018_project/sample_parsed_ace_data_2018.csv
+
+/ace_2012_project/CODEBOOK12_LLCP.pdf
