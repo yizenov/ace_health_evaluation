@@ -1,0 +1,11 @@
+
+page 104
+Module: 22.1-11 Adverse Childhood Experience
+SAS Variable Name: ACEDEPRS
+variables: 230-240
+
+381-391 characters
+
+CRACE, MRACE
+
+19 37 40 47 55
