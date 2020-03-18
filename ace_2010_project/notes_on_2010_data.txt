@@ -1,0 +1,15 @@
+
+128 pages in pdf
+451,075 records for 2010
+record length of 1518 positions
+397 variables
+
+403 extracted variables
+27 rep variables
+1519 line length
+451,076 processed inputs (1st row is column indexes)
+
+11, 15, 32, 50, 55
+District of Columbia, Hawaii, Nevada, Vermont, Wisconsin
+
+state 14 missing one age data 'nan'

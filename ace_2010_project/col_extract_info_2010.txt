@@ -1,0 +1,403 @@
+1. 1-2 :: 2 :: _STATE :: Num :: State FIPS Code
+2. 3-4 :: 2 :: _GEOSTR :: Num :: Geographic Stratum Code
+3. 5 :: 1 :: _DENSTR2 :: Num :: Household Density Stratum Code
+4. 6 :: 1 :: PRECALL :: Num :: Pre
+5. 7-12 :: 6 :: REPNUM :: Num :: Replicate Number
+6. 13-14 :: 2 :: REPDEPTH :: Num :: Replicate Depth
+7. 15-16 :: 2 :: FMONTH :: Num :: File Month
+8. 17-24 :: 8 :: IDATE :: Char :: Interview Date
+9. 17-18 :: 2 :: IMONTH :: Char :: Interview Month
+10. 19-20 :: 2 :: IDAY :: Char :: Inte
+11. 21-24 :: 4 :: IYEAR :: Char :: Interview Year
+12. 25-29 :: 5 :: INTVID :: Char :: Interviewer Identification
+13. 30-32 :: 3 :: DISPCODE :: Num :: Final Disposition
+14. 33-42 :: 10 :: SEQNO :: Num :: Annual Sequence Number
+15. 33-42 :: 10 :: _PSU :: Num :: Primary Sampling Unit (Equal to Annual Sequence Number)
+16. 43-44 :: 2 :: NATTMPTS :: Num :: Number of Attempts
+17. 45-50 :: 6 :: NRECSEL :: Num :: Number of Sample Records Selected from Stratum
+18. 51-59 :: 9 :: NRECSTR :: Num :: Number of Telephone Numbers in Stratum from Which Sample Was Selected
+19. 60 :: 1 :: CTELENUM :: Num :: Correct Telephone Number?
+20. 61 :: 1 :: CELLFON :: Num :: Cellular Telephone
+21. 62 :: 1 :: PVTRESID :: Num :: Private Residence?
+22. 63-64 :: 2 :: NUMADULT :: Num :: Number of Adults in Household
+23. 65-66 :: 2 :: NUMMEN :: Num :: Number of Adult Men in Household
+24. 67-68 :: 2 :: NUMWOMEN :: Num :: Number of Adult Women in Household
+25. 73 :: 1 :: GENHLTH :: Num :: Would you say that in general your health is:
+26. 74-75 :: 2 :: PHYSHLTH :: Num :: Now thinking about your physical health, which includes physical illness and injury, for how many days during the past
+27. 76-77 :: 2 :: MENTHLTH :: Num :: Now thinking about your mental health, which includes stress, depression, and problems with emotions, for how many
+28. 78-79 :: 2 :: POORHLTH :: Num :: During the past 30 days, for about how many days did poor physical or mental health keep you from doing your usual
+29. 80 :: 1 :: HLTHPLAN :: Num :: Do you have any kind of health care coverage, including health ins
+30. 81 :: 1 :: PERSDOC2 :: Num :: Do you have one person you think of as your personal doctor or health care provider?  (If "No" ask "Is there more than
+31. 82 :: 1 :: MEDCOST :: Num :: Was there a time in the past 12 months when you needed to see a doctor but could not because of cost?
+32. 83 :: 1 :: CHECKUP1 :: Num :: About how long has it been since you last visited a doctor for a routine checkup?   [A routine checkup is a general
+33. 84-85 :: 2 :: QLREST2 :: Num :: During the past 30 days, for about how many days have you felt you did not get enough rest or sleep?
+34. 86 :: 1 :: EXERANY2 :: Num :: During the past month, other than your regular job, did you participate in any physical activities or exercises such as
+35. 87 :: 1 :: DIABETE2 :: Num :: Have you ever been told by a doctor that you have diabetes  (If "Yes" and respondent is female, ask "Was this only
+36. 88 :: 1 :: LASTDEN3 :: Num :: How long has it been since you last visited a dentist or a dental clinic for any reason? Include visits to dental
+37. 89 :: 1 :: RMVTETH3 :: Num :: How many of your permanent teeth have been removed because of tooth decay or gum disease? Include teeth lost to
+38. 90 :: 1 :: DENCLEAN :: Num :: How long has it been since you had your teeth cleaned by a dentist or dental hygienist?
+39. 91 :: 1 :: CVDINFR4 :: Num :: (Ever told) you had a heart attack, also called a myocardial infarction?
+40. 92 :: 1 :: CVDCRHD4 :: Num :: (Ever told) you had angina or coronary heart disease?
+41. 93 :: 1 :: CVDSTRK3 :: Num :: (Ever told) you had a stroke.
+42. 94 :: 1 :: ASTHMA2 :: Num :: Have you ever been told by a doctor, nurse, or other health professional that you had asthma?
+43. 95 :: 1 :: ASTHNOW :: Num :: Do you still have asthma?
+44. 96 :: 1 :: QLACTLM2 :: Num :: Are you limited in any way in any activities because of physical, mental, or emotional problems?
+45. 97 :: 1 :: USEEQUIP :: Num :: Do you now have any health problem that requires you to use special equipment, such as a cane, a wheelchair, a
+46. 98 :: 1 :: SMOKE100 :: Num :: Have you smoked at least 100 cigarettes in your entire life?   [Note:  5 packs = 100 cigarettes]
+47. 99 :: 1 :: SMOKDAY2 :: Num :: Do you now smoke cigarettes every day, some days, or not at all?
+48. 100 :: 1 :: STOPSMK2 :: Num :: During the past 12 months, have you stopped smoking for one day or longer because you were trying to quit smoking?
+49. 101-102 :: 2 :: LASTSMK1 :: Num :: How long has it been since you last smoked cigarettes regularly?
+50. 103 :: 1 :: USENOW3 :: Num :: Do you currently use chewing tobacco, snuff, or snus every day, some days, or not at all?  (Snus (Swedish for snuff)
+51. 104-105 :: 2 :: AGE :: Num :: What is your age?
+52. 106 :: 1 :: HISPANC2 :: Num :: Are you Hispanic or Latino?
+53. 107-112 :: 6 :: MRACE :: Char :: Which one or more of the following would you say is your race?   [Mark all that apply.]
+54. 113 :: 1 :: ORACE2 :: Num :: Which one of these groups would you say best represents your race?
+55. 114 :: 1 :: VETERAN2 :: Num :: Have you ever served on active duty in the United States Armed Forces, either in the regular military or in a National
+56. 115 :: 1 :: MARITAL :: Num :: Are you: (marital status)
+57. 116-117 :: 2 :: CHILDREN :: Num :: How many children less than 18 years of age live in your household?
+58. 118 :: 1 :: EDUCA :: Num :: What is the highest grade or year of school you completed?
+59. 119 :: 1 :: EMPLOY :: Num :: Are you currently: (employment status)
+60. 120-121 :: 2 :: INCOME2 :: Num :: Is your annual household income from all sources:  (If respondent refuses at any income level, code "Refused.")
+61. 122-125 :: 4 :: WEIGHT2 :: Num :: About how
+62. 126-129 :: 4 :: HEIGHT3 :: Num :: About how tall are you without shoes?  (If respondent answers in metrics, put a 9 in the first column)[Round fractions
+63. 130-132 :: 3 :: CTYCODE :: Num :: What county do you live in?
+64. 133-137 :: 5 :: ZIPCODE :: Char :: What is your ZIP Code where you live?
+65. 138 :: 1 :: NUMHHOL2 :: Num :: Do you have more than one telephone number in your household?  Do not include cell phones or numbers that are
+66. 139 :: 1 :: NUMPHON2 :: Num :: How many of these telephone numbers are residential numbers?
+67. 140 :: 1 :: TELSERV3 :: Num :: During the past 12 months, has your househo
+68. 141 :: 1 :: CPDEMO1 :: Num :: Do you have a cell phone for personal use?  Please include cell phones used for both business and personal use
+69. 142 :: 1 :: CPDEMO2 :: Num :: Do you share a cell phone for personal use (at least one
+70. 143 :: 1 :: CPDEMO3 :: Num :: Do you usually share this cell phone (at least one
+71. 144-146 :: 3 :: CPDEMO4 :: Num :: Thinking about all the phone calls that you receive on your landline or cell phone, what percent, between 0 and 100,
+72. 147 :: 1 :: SEX Prologue: :: Num :: Indicate sex of respondent.
+73. 148 :: 1 :: PREGNANT :: Num :: To your knowledge, are you now pregnant?
+74. 149 :: 1 :: DRNKANY4 :: Num :: During the past 30 days, have you had at least one drink of any alcoholic beverage such as beer, wine, a malt
+75. 150-152 :: 3 :: ALCDAY4 :: Num :: During the past 30 days, how many days per week or per month did you have at least one drink of any alcoholic
+76. 153-154 :: 2 :: AVEDRNK2 :: Num :: One drink is equivalent to a 12
+77. 155-156 :: 2 :: DRNK3GE5 :: Num :: Considering all types of alcoholic beverages, how many times during the past 30 days did you have 5 or more drinks
+78. 157-158 :: 2 :: MAXDRNKS :: Num :: During the past 30 days, what is the largest number of drinks you had on any occasion?
+79. 159 :: 1 :: FLUSHOT4 :: Num :: A flu s
+80. 160-165 :: 6 :: FLSHTMY1 :: Num :: During what month and year did you receive your most recent seasonal flu shot?
+81. 166 :: 1 :: FLUSPRY3 :: Num :: The seasonal flu vaccine sprayed in the nose is also called FluMistŽ. During the past 12 months, have you had a
+82. 167-172 :: 6 :: FLSPRMY1 :: Num :: During what month and year did you receive your most recent seasonal flu vaccine that was sprayed in your nose?
+83. 173 :: 1 :: PNEUVAC3 :: Num :: A pneumonia shot or pneumococcal vaccine is usually given only once or twice in a person´s lifetime and is different
+84. 174-175 :: 2 :: FALL3MN2 :: Num :: In the past 3 months, how many times have you fallen?
+85. 176-177 :: 2 :: FALLINJ2 :: Num :: How many of these falls caused an injury? By an injury, we mean the fall caused you to limit your regular activities for
+86. 178 :: 1 :: SEATBELT :: Num :: How often do you use seat belts when you drive or ride in a car? Would you say
+87. 179-180 :: 2 :: DRNKDRI2 :: Num :: During the past 30 days, how many times have you driven when you™ve had perhaps too much to drink?
+88. 181 :: 1 :: HADMAM :: Num :: A mammogram is an x
+89. 182 :: 1 :: HOWLONG :: Num :: How long has it been since you had your last mammogram?
+90. 183 :: 1 :: PROFEXAM :: Num :: A cli
+91. 184 :: 1 :: LENGEXAM :: Num :: How long has it been since your last breast exam?
+92. 185 :: 1 :: HADPAP2 :: Num :: A Pap test is a test for cancer of the cervix. Have you ever had a Pap test?
+93. 186 :: 1 :: LASTPAP2 :: Num :: How long has it been since you had your last Pap test?
+94. 187 :: 1 :: HADHYST2 :: Num :: Have you had a hysterectomy?  (A hysterectomy is an operation to remove the uterus (womb).)
+95. 188 :: 1 :: PSATEST :: Num :: A Prostate
+96. 189 :: 1 :: PSATIME :: Num :: How long has it been since you had your last PSA test?
+97. 190 :: 1 :: DIGRECEX :: Num :: A digital rectal exam is an exam in which a doctor, nurse or other health professional places a gloved finger into the
+98. 191 :: 1 :: DRETIME :: Num :: How long has it been since your last digital rectal exam?
+99. 192 :: 1 :: PROSTATE :: Num :: Have you ever been told by a doctor, nurse, or other health professional that you had prostate cancer?
+100. 193 :: 1 :: BLDSTOOL :: Num :: A blood stool test is a test that may use a special kit at home to determine whether the stool contains blood.  Have
+101. 194 :: 1 :: LSTBLDS3 :: Num :: How long has it been since you had your last blood stool test using a home kit?
+102. 195 :: 1 :: HADSIGM3 :: Num :: Sigmoidoscopy and colonoscopy are exams in which a tube is inserted in the rectum to view the colon for signs of
+103. 196 :: 1 :: HADSGCO1 :: Num :: For a SIGMOIDOSCOPY, a flexible tube is inserted into the rectum to look for problems. A COLONOSCOPY is similar,
+104. 197 :: 1 :: LASTSIG3 :: Num :: How long has it been since you had your last sigmoidoscopy or colonoscopy?
+105. 198 :: 1 :: HIVTST5 :: Num :: Have you ever been tested for HIV?  Do not count tests you may have had as part of a blood donation. Include testing
+106. 199-204 :: 6 :: HIVTSTD2 :: Num :: Not including blood donations, in what month and year was your last HIV test?  (If response is before January 1985,
+107. 205-206 :: 2 :: WHRTST8 :: Num :: Where did you have your last HIV test
+108. 207 :: 1 :: HIVRDTST :: Num :: Was it a rapid test where you could get your results within a couple of hours?
+109. 208 :: 1 :: HIVRISK2 :: Num :: I am going to read you a list. When I am done, please tell me if any of the situations apply to you. You do not need to
+110. 209 :: 1 :: EMTSUPRT :: Num :: How often do you get the social and emotional support you need?
+111. 210 :: 1 :: LSATISFY :: Num :: In general, how satisfied are you with your life?
+112. 245 :: 1 :: PDIABTST :: Num :: Have you had a test for high blood sugar or diabetes within the past three years?
+113. 246 :: 1 :: PREDIAB1 :: Num :: Have you ever been told by a doctor or other health professional that you have pre
+114. 247-248 :: 2 :: DIABAGE2 :: Num :: How old were you when you were told you have diabetes?
+115. 249 :: 1 :: INSULIN :: Num :: Are you now taking insulin?
+116. 250-252 :: 3 :: BLDSUGAR :: Num :: About how often do you check your blood for glucose or sugar?  Include times when checked by a family member or
+117. 253-255 :: 3 :: FEETCHK2 :: Num :: About how often do you check your feet for any sores or irritations?  Include times when checked by a family member
+118. 256-257 :: 2 :: DOCTDIAB :: Num :: About how many times in the past 12 months have you seen a doctor, nurse, or other health professional for your
+119. 258-259 :: 2 :: CHKHEMO3 :: Num :: A test for ﬁA one Cﬂ measures the average level of blood sugar over the past three months.  About how many times in
+120. 260-261 :: 2 :: FEETCHK :: Num :: About how many times in the past 12 months has a health professional checked your feet for any sores or irritations?
+121. 262 :: 1 :: EYEEXAM :: Num :: When was the last time you had an eye exam in which the pupils were dilated? This would have made you temporarily
+122. 263 :: 1 :: DIABEYE :: Num :: Has a doctor ever told you that diabetes has affected your eyes or that you had retinopathy?
+123. 264 :: 1 :: DIABEDU :: Num :: Have you ever taken a course or class in how to manage your diabetes yourself?
+124. 265-266 :: 2 :: PAINACT2 :: Num :: During the past 30 days, for about how many days did pain make it hard for you to do your usual activities, such as
+125. 267-268 :: 2 :: QLMENTL2 :: Num :: During the past 30 days, for about how may days have you felt sad, blue, or depressed?
+126. 269-270 :: 2 :: QLSTRES2 :: Num :: During the past 30 days, for about how many days have you felt worried, tense, or anxious?
+127. 271-272 :: 2 :: QLHLTH2 :: Num :: During the past 30 days, for about how many days have you felt very healthy and full of energy?
+128. 273 :: 1 :: VIDFCLT2 :: Num :: How much difficulty, if any, d
+129. 274 :: 1 :: VIREDIF2 :: Num :: How much difficulty, if any, do you have reading print in newspaper, magazine, recipe, menu, or numbers on the
+130. 275 :: 1 :: VIPRFVS2 :: Num :: When was the last time you had your eyes examined by any doctor or eye care provider?
+131. 276-277 :: 2 :: VINOCRE2 :: Num :: What is the main reason you have not visited an eye care professional in the past 12 months?
+rep 132. 278 :: 1 :: VIEYEXM2 :: Num :: When was the last time you had an eye exam in which the pupils were dilated? This would have made you temporarily
+133. 279 :: 1 :: VIINSUR2 :: Num :: Do you have any kind of health insurance coverage for eye care?
+134. 280 :: 1 :: VICTRCT2 :: Num :: Have you been told by an eye doctor or other health care professional that you NOW have cataracts?
+135. 281 :: 1 :: VIGLUMA2 :: Num :: Have you EVER been told by an eye doctor or other health care professional that you had glaucoma?
+136. 282 :: 1 :: VIMACDG2 :: Num :: Have you EVER been told by an eye doctor or other health care professional that you had age
+137. 283 :: 1 :: NUMBURN2 :: Num :: In the past 12 months, how many times did you have a red OR painful sunburn that lasted a day or more?
+138. 284-285 :: 2 :: SLEPTIME :: Num :: On average, how
+139. 286 :: 1 :: SLEPSNOR :: Num :: Do you snore?  (If the respondent indicates that their spouse or someone told him/her that they snore, then the
+140. 287-288 :: 2 :: SLEPDAY :: Num :: During the past 30 days, for about how many days did you find yourself unintentionally falling asleep during the day?
+141. 289 :: 1 :: SLEPDRIV :: Num :: During the past 30 days, have you ever nodded off or fallen asleep, even just for a brief moment, while driving?
+142. 290 :: 1 :: BRTHCNT3 :: Num :: Are you or your [if female, insert ﬁhusband/partner,ﬂ if male, insert ﬁwife/partnerﬂ] doing anything now to keep [if female,
+143. 291-292 :: 2 :: TYPCNTR5 :: Num :: What are you or your [If female, insert `husband/partner´, if male, insert `wife/partner´] doing now to keep [If female,
+144. 293-294 :: 2 :: NOBCUSE3 :: Num :: What is your main reason for not doing anything now to keep [If female, ﬁyouﬂ, if male, insert ﬁherﬂ] from getting
+145. 295 :: 1 :: FPCHLDF2 :: Num :: How do you feel about having a child now or sometime in the future? Would you say:
+146. 296-297 :: 2 :: ASTHMAGE :: Num :: How old were you when you were first told by a doctor, nurse or other health professional that you had asthma?
+147. 298 :: 1 :: ASATTACK :: Num :: During the past 12 months, have you had an episode of asthma or an asthma attack?
+148. 299-300 :: 2 :: ASERVIST :: Num :: During the past 12 months, how many times did you visit an emergency room or urgent care center because of your
+149. 301-302 :: 2 :: ASDRVIST :: Num :: During the past 12 months, how many times did you see a doctor, nurse or other health professional for urgent
+150. 303-304 :: 2 :: ASRCHKUP :: Num :: During the past 12 months, how many times did you see a doctor, nurse, or other health professional for a routine
+151. 305-307 :: 3 :: ASACTLIM :: Num :: During the past 12 months, how many days were you unable to work or carry out your usual activities because of your
+152. 308 :: 1 :: ASYMPTOM :: Num :: Symptoms of asthma include cough, wheezing, shortness of breath, chest tightness and phlegm production when you
+153. 309 :: 1 :: ASNOSLEP :: Num :: During the past 30 days, how many days did symptoms of asthma make it difficult for you to stay asleep? Would you
+154. 310 :: 1 :: ASTHMED3 :: Num :: During the past 30 days, how many days did you take a prescription asthma medication to PREVENT an asthma
+155. 311 :: 1 :: ASINHALR :: Num :: During the past 30 days, how often did you use a prescription asthma inhaler DURING AN ASTHMA ATTACK to stop
+156. 312 :: 1 :: HAVARTH2 :: Num :: Have you ever been told by a doctor or other health professional that you have some form of arthritis, rheumatoid
+157. 313 :: 1 :: WRKHCF1 :: Num :: Do you currently volunteer or work in a hospital, medical clinic, doctor´s office, dentist´s office, nursing home or some
+158. 314 :: 1 :: DIRCONT1 :: Num :: Do you provide direct patient care as part of your routine work? By direct patient care we
+159. 315 :: 1 :: DRHPAD1 :: Num :: Has a doctor, nurse, or other health professional ever said that you have– Lung problems, other than asthma, Kidney
+160. 316 :: 1 :: HAVHPAD :: Num :: Do you still have (this/any of these) problem(s)?
+161. 317 :: 1 :: SHINGLES :: Num :: A vaccine for shingles has been available since May 2006, it is called Zostavax®, the zoster vaccine, or the shingles
+162. 318 :: 1 :: TNSARCV :: Num :: Have you received a tetanus shot in the past 10 years?
+163. 319 :: 1 :: TNSARCNT :: Num :: Was your most recent tetanus shot given in 2005 or later?
+164. 320 :: 1 :: TNSASHOT :: Num :: Did your doctor say your recent tetanus shot included the pertussis or whooping cough vaccine?
+165. 321 :: 1 :: HPVADVC2 :: Num :: Have you ever had the HPV vaccination?  (Human Papilloma Virus (Human PapŁuhŁlohŁmuh Virus); Gardasil
+166. 322-323 :: 2 :: HPVADSHT :: Num :: How many HPV shots did you receive?
+167. 324 :: 1 :: CNCRHAVE :: Num :: Have you EVER been told by a doctor, nurse, or other health professional that you had cancer?   [Read only if
+168. 325 :: 1 :: CNCRDIFF :: Num :: How many different types of cancer have you had?
+169. 326-327 :: 2 :: CNCRAGE :: Num :: At what age were you told that you had cancer?   [If Response = 2 (Two) or 3 (Three or more), ask: ﬁAt what age was
+170. 328-329 :: 2 :: CNCRTYPE :: Num :: What type of cancer was it?   [If Response = 2 (Two) or 3 (Three or more), ask: ﬁWith your most recent diagnoses of
+171. 330 :: 1 :: CSRVTRT :: Num :: Are you currently receiving treatment for cancer? By treatment, we mean surgery, radiation therapy, chemotherapy, or
+172. 331-332 :: 2 :: CSRVDOC :: Num :: What type of doctor provides the majority of your health care?
+173. 333 :: 1 :: CSRVSUM :: Num :: Did any doctor, nurse, or other health professional EVER give you a written summary of all the cancer treatments that
+174. 334 :: 1 :: CSRVRTRN :: Num :: Have you EVER received instructions from a doctor, nurse, or other health professional about where you should return
+175. 335 :: 1 :: CSRVINST :: Num :: Were these instructions written down or printed on paper for you?
+176. 336 :: 1 :: CSRVINSR :: Num :: With your most recent diagnosis of cancer, did you have health insurance that paid for all or part of your cancer
+177. 337 :: 1 :: CSRVDEIN :: Num :: Were you EVER denied health insurance or life insurance coverage because of your cancer?
+178. 338 :: 1 :: CSRVCLIN :: Num :: Did you participate in a clinical trial as part of your cancer treatment?
+179. 339 :: 1 :: CSRVPAIN :: Num :: Do you currently have physical pain caused by your cancer or cancer treatment?
+180. 340 :: 1 :: CSRVCTRL :: Num :: Is your pain currently under control?
+181. 341 :: 1 :: CAREGIVE :: Num :: During the past month, did you provide any such care or assistance to a friend or family member?
+182. 342-344 :: 3 :: CRGVAGE :: Num :: What age is the person to whom you are giving care?
+183. 345 :: 1 :: CRGVGNDR :: Num :: Is this person male or female?
+184. 346-347 :: 2 :: CRGVRELT :: Num :: What is her/her relationship to you? For example is he/she your (mother/daughter or father/son)?
+185. 348-350 :: 3 :: CRGVLONG :: Num :: For how long have you provided care for [CATI: code from Q3]. If Q3 = 77 (Don´t know/not sure) or 99 (Refused), say
+186. 351-352 :: 2 :: CRGVPROB :: Num :: What has a doctor said is the major health problem, long
+187. 353-354 :: 2 :: CRGVMST1 :: Num :: In which one of the following areas does the person you care for most need your help?
+188. 355-357 :: 3 :: CRGVHRS :: Num :: In an average week, how many hours do you provide care for [CATI: code from Q3] because of his/her health problem,
+189. 358-359 :: 2 :: CRGVDIFF :: Num :: I am going to read a list of difficulties you may have faced as a caregiver. Please indicate which one of the following is
+190. 360 :: 1 :: CRGVCHNG :: Num :: During the past year, has the person you care for experienced changes in thinking or remembering?
+191. 361 :: 1 :: RRCLASS2 :: Num :: How do other p
+192. 362 :: 1 :: RRCOGNT2 :: Num :: How often do you think about your race? Would you say never, once a year, once a month, once a week, once a day,
+193. 363 :: 1 :: RRATWRK2 :: Num :: Within the past 12 months at work, do you feel you were treated worse than, the same as, or better than people of
+194. 364 :: 1 :: RRHCARE3 :: Num :: Within the past 12 months when seeking health care, do you feel your experiences were worse than, the same as, or
+195. 365 :: 1 :: RRPHYSM2 :: Num :: Within the past 30 days, have you experienced any physical symptoms, for example, a headache, an upset stomach,
+196. 366 :: 1 :: RREMTSM2 :: Num :: Within the past 30 days, have you felt emotionally upset, for example angry, sad, or frustrated, as a result of how you
+197. 367-368 :: 2 :: ADPLEASR :: Num :: Over the last 2 weeks, how many days have you had little interest or pleasure in doing things?
+198. 369-370 :: 2 :: ADDOWN :: Num :: Over the last 2 weeks, how many days have you felt down, depressed or hopeless?
+199. 371-372 :: 2 :: ADSLEEP :: Num :: Over the last 2 weeks, how many days have you had trouble falling asleep or staying asleep or sleeping too much?
+200. 373-374 :: 2 :: ADENERGY :: Num :: Over the last 2 weeks, how many days have you felt tired or had little energy?
+201. 375-376 :: 2 :: ADEAT1 :: Num :: Over the last 2 weeks, how many days have you had a poor appetite or eaten too much?
+202. 377-378 :: 2 :: ADFAIL :: Num :: Over the last 2 weeks, how many days have you felt bad about yourself or that you were a failure or had let yourself or
+203. 379-380 :: 2 :: ADTHINK :: Num :: Over the last 2 weeks, how many days have you had trouble concentrating on things, such as reading the newspaper
+204. 381-382 :: 2 :: ADMOVE :: Num :: Over the last 2 weeks, how many days have you moved or spoken so s
+205. 383 :: 1 :: ADANXEV :: Num :: Has a doctor or other healthcare provider EVER told you that you had an anxiety disorder (including acute stress
+206. 384 :: 1 :: ADDEPEV :: Num :: Has a doctor or other healthcare provider EVER told you that you have a depressive disorder (including depression,
+207. 385 :: 1 :: CIMEMLOS :: Num :: During the past 12 months, have you experienced confusion or memory loss that is happening more often or is getting
+208. 386 :: 1 :: CINOADLT :: Num :: [If Q1 = 1); Not in
+209. 387-388 :: 2 :: CIRBIAGE :: Num :: Of these people, please select the person who had the most recent birthday. How old is this person?
+210. 389 :: 1 :: CIHOWOFT :: Num :: During the past 12 months, how often [If Q1 = 1 (Yes): insert ﬁhave you;ﬂ otherwise, insert ﬁhas this personﬂ] given up
+211. 390 :: 1 :: CIASSIST :: Num :: As a result of [If Q1 = 1 (Yes): insert ﬁyour;ﬂ otherwise, insert ﬁthis person™sﬂ] confusion or memory loss, in which of the
+212. 391 :: 1 :: CIINTFER :: Num :: During the past 12 months, how often has confusion or memory loss interfered with [If Q1 = 1 (Yes): insert ﬁyour;ﬂ
+213. 392 :: 1 :: CIFAMCAR :: Num :: During the past 30 days, how often [If Q1 = 1 (Yes): insert ﬁhas;ﬂ otherwise, insert ﬁhave you,ﬂ] a family member or
+214. 393 :: 1 :: CIHCPROF :: Num :: Has anyone discussed with a health care professional, increases in [If Q1 = 1 (Yes): insert ﬁyour;ﬂ otherwise, insert
+215. 394 :: 1 :: CIMEDS :: Num :: Have [If Q1 = 1 (Yes): insert ﬁyou;ﬂ otherwise, insert ﬁthis personﬂ] received treatment such as therapy or medications
+216. 395 :: 1 :: CIDIAGAZ :: Num :: Has a health care professional ever said that [If Q1 = 1 (Yes): insert ﬁyou have;ﬂ otherwise, insert ﬁthis person hasﬂ]
+217. 396 :: 1 :: RENTHOM1 :: Num :: Do you own or rent your home?  (Home is defined as the place where you live most of the time/the majority of the
+218. 397 :: 1 :: SCNTMONY :: Num :: How often in the past 12 months would you say you were worried or stressed about having enough money to pay your
+219. 398 :: 1 :: SCNTMEAL :: Num :: How often in the past 12 months would you say you were worried or stressed about having enough money to buy
+220. 399 :: 1 :: SCNTPAID :: Num :: At your main job or business, how are you generally paid for the work you do.  Are you:
+221. 400-401 :: 2 :: SCNTWORK :: Num :: About how many hours do you work per week on all of your jobs and businesses  combined?
+222. 402 :: 1 :: SCNTLPAD :: Num :: Thinking about the last time you worked, at your main job or business, how were you generally paid for the work you
+223. 403-404 :: 2 :: SCNTLWRK :: Num :: Thinking about the last time you worked, about how many hours did you work per week at all of your jobs and
+224. 405 :: 1 :: SCNTVOTE :: Num :: Did you vote in the last presidential election? The November 2008 election between Barack Obama and John McCain?
+225. 406 :: 1 :: GPWELPR3 :: Num :: How well prepared do you feel your household is to handle a large
+226. 407 :: 1 :: GP3DYWTR :: Num :: Does your household have a 3
+rep 227. 408 :: 1 :: GP3DYFD1 :: Num :: Does your household have a 3
+rep 228. 409 :: 1 :: GP3DYPRS :: Num :: Does your household have a 3
+229. 410 :: 1 :: GPBATRAD :: Num :: Does your household have a working battery operated radio and working batteries for your use if the electricity is out?
+230. 411 :: 1 :: GPFLSLIT :: Num :: Does your household have a working flashlight and working batteries for your use if the electricity is out?
+231. 412 :: 1 :: GPEMRCM1 :: Num :: In a large
+232. 413 :: 1 :: GPEMRIN1 :: Num :: What would be your main method or way of getting information from authorities in a large
+233. 414 :: 1 :: GPVACPL1 :: Num :: Does your household have a written disaster evacuation plan for how you
+234. 415 :: 1 :: GPMNDEVC :: Num :: If public authorities announced a mandatory evacuation from your community due to a large
+235. 416-417 :: 2 :: GPNOTEV1 :: Num :: What would be the main reason you might not evacuate if asked to do so?
+236. 418 :: 1 :: VHCOMBAT :: Num :: Did you ever serve in a combat or war zone?
+237. 419 :: 1 :: VHDRPTSD :: Num :: Has a doctor or other health professional ever told you that you have depression, anxiety, or post traumatic stress
+238. 420 :: 1 :: VHDRTBI :: Num :: Has a doctor or other health professional ever told you that you have suffered a traumatic brain injury (TBI)?
+239. 421 :: 1 :: VHCOUNSL :: Num :: In the past 12 months, did you receive any psychological or psychiatric counseling or treatment?
+240. 422 :: 1 :: VHTAKLIF :: Num :: Has there been a time in the past 12 months when you thought of taking your own life?
+241. 423 :: 1 :: VHSUICID :: Num :: During the past 12 months, did you attempt to commit suicide? Would you say
+242. 424 :: 1 :: ACEDEPRS :: Num :: Did you live with anyone who was depressed, mentally ill, or suicidal?
+243. 425 :: 1 :: ACEDRINK :: Num :: Did you live with anyone who was a problem drinker or alcoholic?
+244. 426 :: 1 :: ACEDRUGS :: Num :: Did you live with anyone who used illegal street drugs or who abused prescription medications?
+245. 427 :: 1 :: ACEPRISN :: Num :: Did you live with anyone who served time or was sentenced to serve time in a prison, jail, or other correctional facility?
+246. 428 :: 1 :: ACEDIVRC :: Num :: Were your parents separated or divorced?
+247. 429 :: 1 :: ACEPUNCH :: Num :: How often did your parents or adults in your home ever slap, hit, kick, punch or beat each other up?
+248. 430 :: 1 :: ACEHURT :: Num :: Before age 18, how often did a parent or adult in your home ever hit, beat, kick, or physically hurt you in any way? Do
+249. 431 :: 1 :: ACESWEAR :: Num :: How often did a parent or adult in your home ever swear at you, insult you, or put you down?
+250. 432 :: 1 :: ACETOUCH :: Num :: How often did anyone at least 5 years older than you or an adult, ever touch you sexually?
+251. 433 :: 1 :: ACETTHEM :: Num :: How often did anyone at least 5 years older than you or an adult, try to make you touch them sexually?
+252. 434 :: 1 :: ACEHVSEX :: Num :: How often did anyone at least 5 years older than you or an adult, force you to have sex?
+253. 460-465 :: 6 :: RCSBIRTH :: Char :: What is the birth month and year of the ﬁXthﬂ child?
+254. 466 :: 1 :: RCSGENDR :: Num :: Is the child a boy or a girl?
+255. 467 :: 1 :: RCHISLAT :: Num :: Is the child Hispanic or Latino?
+256. 468-473 :: 6 :: RCSRACE :: Char :: Which one or more of the following would you say is the race of the child?
+257. 474 :: 1 :: RCSBRACE :: Num :: Which one of these groups would you say best represents the child™s race?
+258. 475 :: 1 :: RCSRLTN2 :: Num :: How are you related to the child?
+259. 476 :: 1 :: CASTHDX2 :: Num :: Has a doctor, nurse or other health professional EVER said that the child has asthma?
+260. 477 :: 1 :: CASTHNO2 :: Num :: Does the child still have asthma?
+261. 478 :: 1 :: FLUSHCH2 :: Num :: During the past 12 months, has [Fill: he/she] had a seasonal flu vaccination?
+262. 479-484 :: 6 :: RCVFVCH4 :: Num :: During what month and year did [Fill: he/she] receive [Fill: his/her] most recent seasonal flu vaccination?
+263. 485 :: 1 :: HPVCHVC :: Num :: A vaccine to prevent the human papilloma virus or HPV infection is available and is called the cervical cancer vaccine,
+264. 486-487 :: 2 :: HPVCHSHT :: Num :: How many HPV shots did she receive?
+265. 497 :: 1 :: CALLBACK :: Num :: We would like to call you again within the next 2 weeks to talk in more detail about (your/your child™s) experiences with
+266. 498 :: 1 :: ADLTCHLD :: Num :: Which household member was selected to be the focus of the callback.
+267. 501-750 :: 250 :: STATEQUE :: Char :: State Added Questions
+268. 860-861 :: 2 :: QSTVER :: Num :: Questionnaire Version Identifier
+269. 862-863 :: 2 :: QSTLANG :: Num :: Language identifier
+270. 874-918 :: 45 :: CPCOUNTY :: Char :: Cell Phone Pilot County Name
+271. 927-928 :: 2 :: H1N1AQ09 :: Num :: How many household members, including you, were ill during the past month?
+272. 929-930 :: 2 :: H1N1AQ10 :: Num :: How many people in your household, including you, were hospitalized for flu during the past month?
+273. 945-949 :: 5 :: _STSTR :: Num :: Sample Design Stratification Variable  (A five digit number that combines the values for _STATE (first two characters),
+274. 950-959 :: 10 :: _STRWT :: Num :: Stratum weight  (Number of records in a stratum (NRECSTR) divided by the number of records selected
+275. 960-969 :: 10 :: _RAW :: Num :: Raw weighting fa
+276. 970-979 :: 10 :: _WT2 :: Num :: Design weight  (Stratum weight (_STRWT) multiplied by the raw weighting factor (_RAW).)
+277. 980-989 :: 10 :: _POSTSTR :: Num :: Post
+278. 990-999 :: 10 :: _FINALWT :: Num :: Final weight assigned to each respondent  (Post
+279. 1000-1009 :: 10 :: _RAWQ1 :: Num :: Raw weighting factor questionnaire version 1  (Number of adults in the household (NUMADULT) divided by the
+280. 1010-1019 :: 10 :: _WT2Q1 :: Num :: Design weight questionnaire version 1  (Stratum weight (_STRWT) multiplied by the raw weighting factor (_RAWQ1).)
+rep 281. 1020-1029 :: 10 :: _POSTQ1 :: Num :: Post
+282. 1030-1039 :: 10 :: _FINALQ1 :: Num :: Final weight assigned to each respondent questionnaire version 1  (Post
+283. 1040-1049 :: 10 :: _RAWQ2 :: Num :: Raw weighting factor questionnaire version 2  (Number of adults in the household (NUMADULT) divided by the
+284. 1050-1059 :: 10 :: _WT2Q2 :: Num :: Design weight questionnaire version 2  (Stratum weight (_STRWT) multiplied by the raw weighting factor (_RAWQ2).)
+rep 285. 1060-1069 :: 10 :: _POSTQ2 :: Num :: Post
+286. 1070-1079 :: 10 :: _FINALQ2 :: Num :: Final weight assigned to each respondent questionnaire version 2  (Post
+287. 1080-1089 :: 10 :: _RAWQ3 :: Num :: Raw weighting factor questionnaire version 3  (Number of adults in the household (NUMADULT) divided by the
+288. 1090-1099 :: 10 :: _WT2Q3 :: Num :: Design weight questionnaire version 3  (Stratum weight (_STRWT) multiplied by the raw weighting factor (_RAWQ3).)
+rep 289. 1100-1109 :: 10 :: _POSTQ3 :: Num :: Post
+290. 1110-1119 :: 10 :: _FINALQ3 :: Num :: Final weight assigned to each respondent questionnaire version 3  (Post
+291. 1120-1121 :: 2 :: _REGION :: Num :: Geographic region within a state, imputed from CTYCODE, _IMPCTY, or _GEOSTR
+292. 1122-1123 :: 2 :: _AGEG_ :: Num :: Age groups used in post
+293. 1124-1125 :: 2 :: _AGEG1_ :: Num :: Age group codes used in version1 post
+294. 1126-1127 :: 2 :: _AGEG2_ :: Num :: Age group codes used in version2 post
+295. 1128-1129 :: 2 :: _AGEG3_ :: Num :: Age group codes used in version3 post
+296. 1130 :: 1 :: _SEXG_ :: Num :: Gender categories used in post
+297. 1131 :: 1 :: _SEXG1_ :: Num :: Gender categories used in version 1 post
+298. 1132 :: 1 :: _SEXG2_ :: Num :: Gender categories used in version 2 post
+299. 1133 :: 1 :: _SEXG3_ :: Num :: Gender categories used in version 3 post
+rep 300. 1134 :: 1 :: _RACEG3_ :: Num :: Post
+rep 301. 1135 :: 1 :: _RACEG31 :: Num :: Post
+rep 302. 1136 :: 1 :: _RACEG32 :: Num :: Post
+rep 303. 1137 :: 1 :: _RACEG33 :: Num :: Post
+304. 1138-1139 :: 2 :: _IMPAGE :: Num :: Imputed age used in post
+305. 1140 :: 1 :: _IMPNPH :: Num :: Imputed number of phones used in weighting
+306. 1141-1150 :: 10 :: _ITSCF1 :: Num :: Interruption in Telephone Service Correction Factor  (CPS number of adults in households with telephones divided by
+307. 1151-1160 :: 10 :: _ITSCF2 :: Num :: Interruption in Telephone Service Correction Factor (Adjusted _WT2)  (Adjusted design weight using TELSERV
+308. 1161-1170 :: 10 :: _ITSPOST :: Num :: Interruption in Telephone Service Post Stratification Correction Factor  (Population estimate for race/gender/age
+309. 1171-1180 :: 10 :: _ITSFINL :: Num :: Interruption in Telephone Service Final Weighting Factor  (ITS design weight (_ITSDCF2) multiplied by the ITS post
+310. 1181-1183 :: 3 :: _IMPCTY :: Num :: Imputed County
+311. 1184-1188 :: 5 :: _MSACODE :: Char :: FIPS Metropolitan Statistical Area Code
+312. 1189 :: 1 :: MSCODE :: Num :: Metropolitan Status Code
+313. 1190-1195 :: 6 :: CRACEORG :: Char :: CRACE with trailing 7, 8, 9s removed
+314. 1196-1201 :: 6 :: CRACEASC :: Num :: CRACE with 7, 8, 9s removed, in ascending order
+315. 1202-1203 :: 2 :: _CRACE :: Num :: Child multiracial race categorization
+316. 1204-1206 :: 3 :: CHILDAGE :: Num :: Child Age
+317. 1207-1208 :: 2 :: _CIMPAG1 :: Num :: Imputed Child Age
+318. 1209 :: 1 :: _CSEXG1_ :: Num :: Child gender categories used in post
+319. 1210 :: 1 :: _CRACE1_ :: Num :: Child post
+320. 1211-1213 :: 3 :: _CAGEG1_ :: Num :: Child age groups used in post
+321. 1214-1223 :: 10 :: _RAWCH1 :: Num :: Raw child weighting factor questionnaire version 1  (Number of children in the household (CHILDREN) divided by the
+322. 1224-1233 :: 10 :: _WT2CH1 :: Num :: Child design weight questionnaire version 1  (Child stratum weight (_STRWT) multiplied by the raw weighting factor
+rep 323. 1234-1243 :: 10 :: _POSTCH1 :: Num :: Post
+324. 1244-1253 :: 10 :: _CHILDQ1 :: Num :: Final weight assigned to each child questionnaire version 1  (Post
+rep 325. 1254-1255 :: 2 :: _CIMPAG2 :: Num :: Imputed Child Age
+rep 326. 1256 :: 1 :: _CSEXG2_ :: Num :: Child gender categories used in post
+rep 327. 1257 :: 1 :: _CRACE2_ :: Num :: Child post
+rep 328. 1258-1260 :: 3 :: _CAGEG2_ :: Num :: Child age groups used in post
+329. 1261-1270 :: 10 :: _RAWCH2 :: Num :: Raw child weighting factor questionnaire version 2  (Number of children in the household (CHILDREN) divided by the
+330. 1271-1280 :: 10 :: _WT2CH2 :: Num :: Child design weight questionnaire version 2  (Child stratum weight (_STRWT) multiplied by the raw weighting factor
+rep 331. 1281-1290 :: 10 :: _POSTCH2 :: Num :: Post
+332. 1291-1300 :: 10 :: _CHILDQ2 :: Num :: Final weight assigned to each child questionnaire version 2  (Post
+rep 333. 1301-1302 :: 2 :: _CIMPAG3 :: Num :: Imputed Child Age
+rep 334. 1303 :: 1 :: _CSEXG3_ :: Num :: Child gender categories used in post
+rep 335. 1304 :: 1 :: _CRACE3_ :: Num :: Child post
+rep 336. 1305-1307 :: 3 :: _CAGEG3_ :: Num :: Child age groups used in post
+337. 1308-1317 :: 10 :: _RAWCH3 :: Num :: Raw child weighting factor questionnaire version 3  (Number of children in the household (CHILDREN) divided by the
+338. 1318-1327 :: 10 :: _WT2CH3 :: Num :: Child design weight questionnaire version 3  (Child stratum weight (_STRWT) multiplied by the raw weighting factor
+rep 339. 1328-1337 :: 10 :: _POSTCH3 :: Num :: Post
+340. 1338-1347 :: 10 :: _CHILDQ3 :: Num :: Final weight assigned to each child questionnaire version 3  (Post
+rep 341. 1348-1349 :: 2 :: _CIMPAGE :: Num :: Imputed Child Age
+rep 342. 1350 :: 1 :: _CSEXG_ :: Num :: Child gender categories used in post
+rep 343. 1351 :: 1 :: _CRACEG_ :: Num :: Child post
+rep 344. 1352-1354 :: 3 :: _CAGEG_ :: Num :: Child age groups used in post
+345. 1355-1364 :: 10 :: _RAWCH :: Num :: Raw child weighting factor  (Number of children in the household (CHILDREN) divided by the imputed number of
+346. 1365-1374 :: 10 :: _WT2CH :: Num :: Child design weight  (Child stratum weight (_STRWT) multiplied by the raw weighting factor (_RAWCH).)
+rep 347. 1375-1384 :: 10 :: _POSTCH :: Num :: Post
+348. 1385-1394 :: 10 :: _CHILDWT :: Num :: Final weight assigned to each child  (Post
+349. 1395-1404 :: 10 :: _RAWHH :: Num :: Raw household  weighting factor  (One divided by the imputed number of phones (_IMPNPH).)
+350. 1405-1414 :: 10 :: _WT2HH :: Num :: Household design weight  (Household stratum weight (_STRWT) multiplied by the raw weighting factor (_RAWHH).)
+rep 351. 1415-1424 :: 10 :: _POSTHH :: Num :: Post
+352. 1425-1434 :: 10 :: _HOUSEWT :: Num :: Final weight assigned to each household  (Post
+353. 1435 :: 1 :: _RFHLTH :: Num :: Adults with good or better health
+354. 1436 :: 1 :: _HCVU65 :: Num :: Respondents aged 18
+355. 1437 :: 1 :: _TOTINDA :: Num :: Adults that report doing physical activity or exercise during the past 30 days other than their regular job
+356. 1438 :: 1 :: _EXTETH2 :: Num :: Adults aged 18+ that have had permanent teeth extracted
+357. 1439 :: 1 :: _ALTETH2 :: Num :: Adults aged 65+ who have had all their natural teeth extracted
+358. 1440 :: 1 :: _DENVST1 :: Num :: Adults that have visited a dentist, dental hygenist or dental clinic within the past year
+359. 1441 :: 1 :: _LTASTHM :: Num :: Adults who have ever been told they have asthma
+360. 1442 :: 1 :: _CASTHMA :: Num :: Adults who have been told they currently have asthma
+361. 1443 :: 1 :: _ASTHMST :: Num :: Computed asthma status
+362. 1444 :: 1 :: _SMOKER3 :: Num :: Four
+363. 1445 :: 1 :: _RFSMOK3 :: Num :: Adults who are current smokers
+364. 1446-1451 :: 6 :: MRACEORG :: Char :: MRACE with trailing 7,8,9s removed
+365. 1452-1457 :: 6 :: MRACEASC :: Char :: MRACE with 7,8,9s removed, in ascending order
+366. 1458-1459 :: 2 :: _PRACE :: Num :: Preferred race category
+367. 1460-1461 :: 2 :: _MRACE :: Num :: Multiracial race categorization
+368. 1462 :: 1 :: RACE2 :: Num :: Race/ethnicity categories
+369. 1463 :: 1 :: _RACEG2 :: Num :: White/Hispanic race group
+370. 1464 :: 1 :: _RACEGR2 :: Num :: Five
+371. 1465 :: 1 :: _RACE_G :: Num :: Race groups used for internet prevalence tables
+372. 1466 :: 1 :: _CNRACE :: Num :: Number of census race categories chosen
+373. 1467 :: 1 :: _CNRACEC :: Num :: Number of census race categories chosen, collapsed
+374. 1468-1469 :: 2 :: _AGEG5YR :: Num :: Fourteen
+375. 1470 :: 1 :: _AGE65YR :: Num :: Two
+376. 1471 :: 1 :: _AGE_G :: Num :: Six
+377. 1472-1474 :: 3 :: HTIN3 :: Num :: Reported height in inches
+378. 1475-1477 :: 3 :: HTM3 :: Num :: Reported height in meters
+379. 1478-1482 :: 5 :: WTKG2 :: Num :: Reported weight in kilograms
+380. 1483-1486 :: 4 :: _BMI4 :: Num :: Body Mass Index (BMI)
+381. 1487 :: 1 :: _BMI4CAT :: Num :: Three
+382. 1488 :: 1 :: _RFBMI4 :: Num :: Adults who have a body mass index greater than 25.00 (Overweight or Obese)
+383. 1489 :: 1 :: _CHLDCNT :: Num :: Number of children in household
+384. 1490 :: 1 :: _EDUCAG :: Num :: Level of education completed
+385. 1491 :: 1 :: _INCOMG :: Num :: Income categories
+386. 1492-1494 :: 3 :: DROCDY2_ :: Num :: Drink
+387. 1495 :: 1 :: _RFBING4 :: Num :: Binge drinkers (males having five or more drinks on one occasion, females having four or more drinks on one
+388. 1496-1499 :: 4 :: _DRNKDY3 :: Num :: Calculated total number of alcoholic beverages consumed per day
+389. 1500-1503 :: 4 :: _DRNKMO3 :: Num :: Calculated total number of alcoholic beverages consumed per month
+390. 1504 :: 1 :: _RFDRHV3 :: Num :: Heavy drinkers (adult men having more than two drinks per day and adult women having more than one drink per day)
+391. 1505 :: 1 :: _RFDRMN3 :: Num :: Adult Men that are Heavy drinkers (having more than two drinks per day)
+392. 1506 :: 1 :: _RFDRWM3 :: Num :: Adult Women that are Heavy drinkers (having more than one drink per day)
+393. 1507 :: 1 :: _FLSHOT4 :: Num :: Adults aged 65+ who have had a flu shot within the past year
+394. 1508 :: 1 :: _PNEUMO2 :: Num :: Adults aged 65+ who have ever had a pneumonia vaccination
+395. 1509 :: 1 :: _RFSEAT2 :: Num :: Always or Nearly Always Wear Seat Belts Calculated Variable
+396. 1510 :: 1 :: _RFSEAT3 :: Num :: Always Wear Seat Belts Calculated Variable
+397. 1511 :: 1 :: _RFMAM2Y :: Num :: Women respondents aged 40+ that have had a mammogram in the past two years
+398. 1512 :: 1 :: _MAM502Y :: Num :: Women respondents aged 50+ that have had a mammogram in the past two years
+399. 1513 :: 1 :: _RFPAP32 :: Num :: Women respondents aged 18+ that have had a pap test in the past three years
+400. 1514 :: 1 :: _RFPSA2Y :: Num :: Male respondents aged 40+ that have had a PSA test in the past 2 years
+401. 1515 :: 1 :: _RFBLDS2 :: Num :: Respondents aged 50+ that have had a blood stool test within the past two years
+402. 1516 :: 1 :: _RFSIGM2 :: Num :: Respondents aged 50 or older that have had a sigmoidoscopy or colonoscopy
+403. 1517 :: 1 :: _AIDTST2 :: Num :: Adults aged 18

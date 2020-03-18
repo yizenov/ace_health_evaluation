@@ -9,3 +9,4 @@ variables: 230-240
 CRACE, MRACE
 
 19 37 40 47 55
+Iowa, North Carolina, Oklahoma, Tennessee, Wisconsin

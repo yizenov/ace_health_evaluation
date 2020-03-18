@@ -5,12 +5,15 @@ home = expanduser("~")
 
 vars = ["ACEDEPRS", "ACEDRINK", "ACEDRUGS", "ACEPRISN", "ACEDIVRC", "ACEPUNCH", "ACEHURT", "ACESWEAR", "ACETOUCH", "ACETTHEM", "ACEHVSEX"]
 
-parsed_file_path = home + "/Downloads/ICGE_course/project/project_ace_python/ace_2012_project/"
-parsed_info_file = "parsed_ace_data_2012.csv"
-state_age_csv_file = "state_age_distribution_ace_data_2012.csv"
-state_age_ace_csv_file = "state_age_ace_statistic_2012.csv"
+parsed_file_path = home + "/Downloads/ICGE_course/project/project_ace_python/ace_2011_project/"
+parsed_info_file = "parsed_ace_data_2011.csv"
+state_age_csv_file = "state_age_distribution_ace_data_2011.csv"
+state_age_ace_csv_file = "state_age_ace_statistic_2011.csv"
 
-variables_nbr = 359
+variables_nbr = 453
+age_variable_idx = 55
+ace_var_start_idx, ace_var_end_idx = 292, 302
+
 fieldnames = [i for i in range(1, variables_nbr + 1)]
 
 with open(state_age_csv_file, 'w') as csvfile1, open(state_age_ace_csv_file, 'w') as csvfile2:
@@ -36,8 +39,8 @@ with open(state_age_csv_file, 'w') as csvfile1, open(state_age_ace_csv_file, 'w'
                     continue
 
                 line = line.split(",")
-                if line[358] != "nan":
-                    line[358] = line[358][:len(line[358]) - 1]
+                if line[variables_nbr - 1] != "nan":
+                    line[variables_nbr - 1] = line[variables_nbr - 1][:len(line[variables_nbr - 1]) - 1]
 
                 if int(line[0]) == state_id:  # state data
                     state_content.append(line)
@@ -46,10 +49,10 @@ with open(state_age_csv_file, 'w') as csvfile1, open(state_age_ace_csv_file, 'w'
                     other_states.add(int(line[0]))
 
 #####################################################################################################
-        # getting state and age based distribution for 2012 dataset
+        # getting state and age based distribution for 2011 dataset
         age_distribution = {i: 0 for i in age_categories[2:]}
 
-        # getting ace statistics by states and ages for 2012 dataset
+        # getting ace statistics by states and ages for 2011 dataset
         general_age_ace_data = {}
 
         for age_group_idx in age_distribution:
@@ -58,7 +61,7 @@ with open(state_age_csv_file, 'w') as csvfile1, open(state_age_ace_csv_file, 'w'
             # 22.1-4 and 22.5 -- combined with "Parents not married", idx = 8
             ace_answers1 = ["yes", "no", "Don’t know/Not Sure", "Parents not married", "Refused", "Not asked or Missing"]
             ace_answers_values1 = ["1", "2", "7", "8", "9", "nan"]
-            for j in range(0, 5):
+            for j in range(0, 5):  # five of ace questions with these set of answers
                 ace_set1_distribution = {i: 0 for i in ace_answers_values1}
                 general_ace_distributions.append(ace_set1_distribution)
                 # writer_ace.writerow(age_categories)
@@ -66,7 +69,7 @@ with open(state_age_csv_file, 'w') as csvfile1, open(state_age_ace_csv_file, 'w'
             # 22.6-11
             ace_answers2 = ["Never", "Once", "More than once", "Don’t know/Not Sure", "Refused", "Not asked or Missing"]
             ace_answers_values2 = ["1", "2", "3", "7", "9", "nan"]
-            for j in range(0, 6):
+            for j in range(0, 6):  # six of ace questions with these set of answers
                 ace_set2_distribution = {i: 0 for i in ace_answers_values2}
                 general_ace_distributions.append(ace_set2_distribution)
 
@@ -78,13 +81,17 @@ with open(state_age_csv_file, 'w') as csvfile1, open(state_age_ace_csv_file, 'w'
             ace_columns.append(ace_answers1[i] + " / " + ace_answers2[i] + " -- number of responses")
         writer_ace.writerow(ace_columns)
 
+        else_counter, else_counter1 = 0, 0
         for idx, line in enumerate(state_content):
             if idx == 0:
                 continue
 
-            age_nbr = int(line[50])
+            if line[age_variable_idx] == "nan":
+                else_counter1 += 1
+                continue
+            age_nbr = int(line[age_variable_idx])
 
-            ace_values = [line[i] for i in range(229, 240)]
+            ace_values = [line[i] for i in range(ace_var_start_idx, ace_var_end_idx + 1)]  #
             # age_category = age_categories[2]
             # for var_idx in range(len(ace_values)):
             #     # age_ace_data = general_age_ace_data[age_category]
@@ -132,7 +139,12 @@ with open(state_age_csv_file, 'w') as csvfile1, open(state_age_ace_csv_file, 'w'
                 age_category = age_categories[9]
                 for var_idx in range(len(ace_values)):
                     general_age_ace_data[age_category][var_idx][ace_values[var_idx]] += 1
+            else:
+                else_counter += 1
 
+        print("else counter " + str(else_counter))
+        print("else_counter1 " + str(else_counter1))
+        print()
 #####################################################################################################
         # outputting rows into csv file
 
@@ -151,7 +163,7 @@ with open(state_age_csv_file, 'w') as csvfile1, open(state_age_ace_csv_file, 'w'
             writer_ace.writerow(age_ace_line)
 
             ace_data = general_age_ace_data[i]
-            for var_id in range(11):
+            for var_id in range(len(vars)):
                 age_ace_line = ["\t", "\t", vars[var_id]]
                 writer_ace.writerow(age_ace_line)
 

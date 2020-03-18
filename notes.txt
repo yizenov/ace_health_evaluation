@@ -9,3 +9,6 @@ column #50 age
 columns 381-391 - ace
 
 475688 lines parsed_ace_data_2012.csv
+
+
+https://www.cdc.gov/brfss/annual_data/annual_data.htm

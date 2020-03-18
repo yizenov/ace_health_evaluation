@@ -1,0 +1,15 @@
+
+190 pages in pdf
+506,467 records for 2011
+record length of 1518 positions (wrong, see the code book)
+450 variables
+
+453 extracted variables
+24 rep variables
+1697 line length
+506,468 processed inputs (1st row is column indexes)
+
+27, 30, 50, 53, 55
+Minnesota, Montana, Vermont, Washington, Wisconsin
+
+state 34 missing one age data 'nan'

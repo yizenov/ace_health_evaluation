@@ -1,6 +1,6 @@
 
 import PyPDF2
-file_name = "CODEBOOK12_LLCP.pdf"
+file_name = "CODEBOOK11_LLCP.pdf"
 pdfFileObj = open(file_name, 'rb')
 # keywords to parse: section, description, type, column, SAS Variable Name
 
@@ -69,7 +69,7 @@ for page_idx in range(1, page_numbers):
             continue
 
 print(len(variable_values))
-file1 = open("col_extract_info_2012.txt", "w")
+file1 = open("col_extract_info_2011.txt", "w")
 questions_set = {}
 print("var idx, column values, length, variable names, type, question:")
 counter = 1
